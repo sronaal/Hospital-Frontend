@@ -1,0 +1,38 @@
+<router-outlet></router-outlet>
+<div class="row">
+    <div class="col-md-6">
+        <div class="caja">
+            <div class="card">
+                <div class="card-body">
+                    <form class="form" [formGroup]="formularioPaciente" (ngSubmit)="agendarCita()">
+                        <div class="form-group">
+                            <label>Cedula:</label>
+                            <input formControlName="cedula" type="number" class="form-control" placeholder="Cedula paciente" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre:</label>
+                            <input formControlName="nombre" type="text" class="form-control" placeholder="Nombre paciente" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label>Correo:</label>
+                            <input formControlName="correo" type="email" class="form-control" placeholder="Correo paciente">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefono:</label>
+                            <input formControlName="telefono" type="number" class="form-control" placeholder="Telefono paciente">
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha:</label>
+                            <input formControlName="fecha" type="date" class="form-control">
+                        </div>
+
+                        <button type="submit" routerLink="consultar-cita" class="btn btn-success">Agendar Cita</button>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
